@@ -1,0 +1,18 @@
+<link rel="import" href="../../bower_components/paper-input/paper-input.html"/>
+<dom-module id="my-input">
+    <template>
+        <paper-input label="[[title]]" value="{{data::input}}"></paper-input>
+    </template>
+    <script>
+        Polymer({
+            is:'my-input',
+            properties:{
+                data:{
+                    type:String,
+                    reflectToAttribute: true
+                },
+                title:String
+            }
+        })
+    </script>
+</dom-module>
