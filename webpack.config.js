@@ -14,10 +14,12 @@ module.exports = {
     devtool: 'source-map',
     module: {
         loaders: [
-            {test: /\.html$/, loader:'raw-loader', exclude: /node_modules/},
-            {test: /\.css$/, loader: 'style-loader!css-loader', exclude: /node_modules/},
-            {test: /\.png$/, loader: 'url-loader?limit=100000', exclude: /node_modules/},
-            {test: /\.jpg$/, loader: 'file-loader', exclude: /node_modules/}
+            {test: /\.html$/, loader:'raw-loader'},
+            {test: /\.css$/, loader: 'style-loader!css-loader'},
+            {test: /\.png$/, loader: 'url-loader?limit=100000'},
+            {test: /\.jpg$/, loader: 'file-loader'},
+            { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&minetype=application/font-woff" },
+            { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" }
         ]
     }
 };

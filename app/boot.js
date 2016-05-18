@@ -2,6 +2,8 @@
 require('bootstrap/dist/css/bootstrap-theme.css');
 require('jquery');
 require('bootstrap/dist/js/bootstrap.js');*/
+require('bootstrap/dist/css/bootstrap.css');
+require('bootstrap/dist/css/bootstrap-theme.css');
 require('angular');
 require('angular-ui-router');
 require('./routerHelperProvider');
