@@ -1,10 +1,9 @@
-/*require('bootstrap/dist/css/bootstrap.css');
-require('bootstrap/dist/css/bootstrap-theme.css');
-require('jquery');
-require('bootstrap/dist/js/bootstrap.js');*/
 require('bootstrap/dist/css/bootstrap.css');
 require('bootstrap/dist/css/bootstrap-theme.css');
+require('jquery/dist/jquery.js');
+require('bootstrap/dist/js/bootstrap.js');
 require('angular');
+require('angular-ui-bootstrap');
 require('angular-ui-router');
 require('./routerHelperProvider');
 require('./home/home.router');
