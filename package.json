@@ -4,7 +4,8 @@
   "description": "Local enviorement to work with webpack and angular1.5",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server --inline --hot"
+    "start": "./node_modules/.bin/webpack-dev-server --inline --hot",
+    "test": "karma start"
   },
   "author": "ardiadrianadri",
   "license": "ISC",
