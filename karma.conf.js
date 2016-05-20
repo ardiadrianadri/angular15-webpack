@@ -17,15 +17,7 @@ module.exports = function (config) {
 
         // list of files / patterns to load in the browser
         files: [
-            'node_modules/requirejs/require.js',
-            'node_modules/karma-requirejs/lib/adapter.js',
-            {pattern: 'node_modules/jquery/dist/jquery.js', included: true, watched: false},
-            {pattern: 'node_modules/bootstrap/dist/js/bootstrap.js', include:true, watched:false},
-            {pattern: 'node_modules/angular/angular.js', include:true, watched:false},
-            {pattern: 'node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js', include:true, watched:false},
-            {pattern: 'node_modules/angular-ui-router/release/angular-ui-router.js', include:true, watched:false},
-            {pattern: 'node_modules/angular-mocks/angular-mocks.js', include:true, watched:false},
-            {pattern: 'app/**/*.test.js', include:true, watched:true}
+            {pattern: 'app/test/boot.test.js', included: true, watched: false},
         ],
 
         
@@ -100,19 +92,18 @@ module.exports = function (config) {
 
         // Continuous Integration mode
         // if true, Karma captures browsers, runs the tests and exits
-        singleRun: false,
+        singleRun: true,
 
         // Concurrency level
         // how many browser should be started simultaneous
         concurrency: Infinity,
         
         plugins:[
+            require('karma-webpack'),
             'karma-chrome-launcher',
             'karma-jasmine',
             'karma-mocha-reporter',
-            'karma-sourcemap-loader',
-            'karma-webpack',
-            'karma-requirejs'
+            'karma-sourcemap-loader'
         ]
     })
 }

@@ -1,7 +1,7 @@
 describe('Controller test example', function(){
     var $rootScope, controller;
 
-    beforeEach(module('app'));
+    beforeEach(window.module('app'));
 
     beforeEach(inject(function (_$rootScope_, _$controller_) {
         var $controller = _$controller_;
